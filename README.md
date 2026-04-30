@@ -93,7 +93,7 @@ Each ticket follows a standardized format:
 
 ## Project Structure
 
-```
+```plaintext
 Helpdesk-Lab/
 │
 ├── README.md
