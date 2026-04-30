@@ -18,7 +18,7 @@ Rather than building a new environment, this lab leverages the existing `steenco
 
 This lab is built directly on top of the existing domain environment:
 
-👉 [SteenCorp Enterprise IT Lab](../README.md)
+👉 [SteenCorp Enterprise IT Lab](https://github.com/CSteen57/SteenCorp-AD-Lab)
 
 The following components are reused:
 
