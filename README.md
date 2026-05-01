@@ -125,3 +125,28 @@ Helpdesk-Lab/
         ├── Ticket_001_Missing_Sales_Drive/
         ├── Ticket_002_GPO_Issue/
         └── Ticket_003_Account_Lockout/
+---
+
+## Key Concept
+
+This lab is not focused on building infrastructure from scratch.
+
+It is focused on:
+
+> Supporting, troubleshooting, and maintaining an existing environment
+
+This reflects real-world help desk and MSP roles where systems are already in place and require ongoing support, documentation, escalation, and user-focused troubleshooting.
+
+---
+
+## Future Expansion
+
+Planned additions:
+
+- Ticket escalation scenarios from Tier 1 to Tier 2
+- Remote support simulation
+- More complex multi-layer troubleshooting
+- Integration with logging or monitoring tools
+- Additional access, account, network, and workstation support scenarios
+
+Additional tickets and scenarios will be added over time.
