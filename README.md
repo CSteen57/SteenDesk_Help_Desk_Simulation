@@ -97,12 +97,19 @@ Each ticket follows a standardized format:
 Helpdesk-Lab/
 │
 ├── README.md
-├── Tickets/
-│   ├── Ticket_001_Drive_Access.md
-│   ├── Ticket_002_GPO_Issue.md
-│   ├── Ticket_003_Account_Lockout.md
+│
+├── Helpdesk_Tickets/
+│   ├── README.md
+│   └── Tickets/
+│       ├── Ticket_001_Missing_Sales_Drive.md
+│       ├── Ticket_002_GPO_Issue.md
+│       └── Ticket_003_Account_Lockout.md
 │
 └── Evidence/
+    └── Helpdesk_Tickets/
+        ├── Ticket_001_Missing_Sales_Drive/
+        ├── Ticket_002_GPO_Issue/
+        └── Ticket_003_Account_Lockout/
 ```
 ---
 
