@@ -47,6 +47,18 @@ This simulates a common help desk access issue where a user loses access to a de
 | Sales drive missing | To be validated |
 
 ---
+## SLA Classification
+
+| SLA Factor | Assessment |
+|---|---|
+| Business Impact | Medium |
+| User Impact | Single Sales user unable to access department drive |
+| Workaround Available | User can sign in, but cannot access Sales shared files |
+| Response Requirement | Initial response within 1 hour |
+| Resolution Requirement | Resolve within 4 business hours if limited to group membership or drive mapping |
+| Escalation Requirement | Escalate if issue affects multiple users, the file server is unreachable, or GPO is not applying after standard troubleshooting |
+
+---
 
 ## Troubleshooting Steps
 
