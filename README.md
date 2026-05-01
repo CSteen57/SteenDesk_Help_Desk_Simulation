@@ -1,6 +1,6 @@
 # SteenCorp Help Desk Simulation Lab
 
-> Simulated help desk environment built on top of the SteenCorp Active Directory domain to demonstrate real-world IT support workflows, ticket handling, and troubleshooting.
+> Simulated help desk environment built on top of the SteenCorp Active Directory domain to demonstrate real-world IT support workflows, ticket handling, SLA awareness, and troubleshooting.
 
 ---
 
@@ -8,9 +8,9 @@
 
 This project extends the **SteenCorp Enterprise IT Lab** by introducing a help desk simulation environment.
 
-It focuses on real-world IT support scenarios, where issues are reported by users, diagnosed, and resolved using structured troubleshooting and SLA-based prioritization.
+It focuses on real-world IT support scenarios where issues are reported by users, diagnosed, resolved, validated, and documented using structured troubleshooting and SLA-based prioritization.
 
-Rather than building a new environment, this lab leverages the existing `steencorp.local` domain to simulate how support teams operate within an established infrastructure.
+Rather than building a new environment from scratch, this lab leverages the existing `steencorp.local` domain to simulate how support teams operate within an established infrastructure.
 
 ---
 
@@ -41,6 +41,15 @@ Simulate day-to-day help desk responsibilities by:
 - Applying structured troubleshooting methodology
 - Resolving incidents within defined SLA targets
 - Validating fixes from the user perspective
+- Documenting ticket activity clearly and professionally
+
+---
+
+## Current Status
+
+This project is currently in progress.
+
+The first ticket simulation focuses on a user access issue involving a missing mapped drive. Additional tickets will be added as the lab expands into Group Policy, account lockout, DNS/DHCP, and escalation scenarios.
 
 ---
 
@@ -48,9 +57,9 @@ Simulate day-to-day help desk responsibilities by:
 
 | Priority | Description | Response Time | Resolution Time |
 |--------|------------|--------------|----------------|
-| High | Critical issue (login failure, no access) | 15 minutes | 2 hours |
-| Medium | Partial functionality (drive access, permissions) | 1 hour | 4 hours |
-| Low | Minor issues or requests | 4 hours | 1 business day |
+| High | Critical issue affecting login, access, or multiple users | 15 minutes | 2 hours |
+| Medium | Single-user issue affecting important work resources | 1 hour | 4 hours |
+| Low | Minor issue or request with workaround available | 4 hours | 1 business day |
 
 ---
 
@@ -64,19 +73,24 @@ This lab includes simulated tickets across common help desk scenarios:
 - Network Issues (DHCP, DNS misconfigurations)
 - System Configuration Issues (local settings, elevation)
 
+View ticket documentation here:
+
+👉 [Helpdesk Ticket Index](./Helpdesk_Tickets/README.md)
+
 ---
 
 ## Ticket Structure
 
-Each ticket follows a standardized format:
+Each ticket follows a standardized support format:
 
 - User Report
-- Priority & SLA
+- Impact & Scope
+- Priority & SLA Classification
 - Investigation Steps
 - Root Cause
 - Resolution
 - Validation
-- Timeline
+- Ticket Closure Notes
 
 ---
 
@@ -84,10 +98,11 @@ Each ticket follows a standardized format:
 
 - Active Directory user and group management
 - Group Policy troubleshooting
-- Network diagnostics (DNS, DHCP)
-- Command-line troubleshooting (`whoami`, `gpresult`, `ipconfig`)
+- Network diagnostics involving DNS and DHCP
+- Command-line troubleshooting using `whoami`, `gpresult`, and `ipconfig`
 - Ticket prioritization and SLA awareness
 - End-user issue resolution
+- Technical documentation
 
 ---
 
@@ -110,26 +125,3 @@ Helpdesk-Lab/
         ├── Ticket_001_Missing_Sales_Drive/
         ├── Ticket_002_GPO_Issue/
         └── Ticket_003_Account_Lockout/
-```
----
-
-## Key Concept
-
-This lab is not focused on building infrastructure, but on:
-
-> Supporting, troubleshooting, and maintaining an existing environment
-
-This reflects real-world help desk roles where systems are already in place and require ongoing support.
-
----
-
-## Future Expansion
-
-Planned additions:
-
-- Ticket escalation scenarios (Tier 1 → Tier 2)
-- Remote support simulation
-- More complex multi-layer troubleshooting
-- Integration with logging or monitoring tools
-
-Additional tickets and scenarios will be added over time.
