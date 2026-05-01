@@ -2,7 +2,7 @@
 
 This section documents simulated Tier 1 and Tier 2 help desk tickets built on top of the SteenCorp Active Directory lab.
 
-The goal is to practice real-world support workflows, including user intake, troubleshooting, root cause analysis, resolution, validation, and ticket documentation.
+The goal is to practice real-world support workflows, including user intake, impact assessment, SLA-based prioritization, troubleshooting, root cause analysis, resolution, validation, and ticket documentation.
 
 ---
 
@@ -11,12 +11,23 @@ The goal is to practice real-world support workflows, including user intake, tro
 | Step | Action | Purpose |
 |---|---|---|
 | 1 | User Report | Capture the issue from the user’s perspective |
-| 2 | Initial Scope | Determine whether the issue affects one user, one device, or multiple users |
-| 3 | Troubleshooting | Validate the issue and gather evidence |
-| 4 | Root Cause | Identify what caused the issue |
-| 5 | Resolution | Apply the approved fix |
-| 6 | Validation | Confirm the issue is resolved from the user side |
-| 7 | Closure | Document the final result and close the ticket |
+| 2 | Impact & Scope | Determine whether the issue affects one user, one device, one department, or multiple users |
+| 3 | SLA Classification | Assign priority based on impact, urgency, and available workaround |
+| 4 | Troubleshooting | Validate the issue and gather evidence |
+| 5 | Root Cause | Identify what caused the issue |
+| 6 | Resolution | Apply the approved fix |
+| 7 | Validation | Confirm the issue is resolved from the user side |
+| 8 | Closure | Document the final result and close the ticket |
+
+---
+
+## SLA Priority Guide
+
+| Priority | Impact | Example | Response Target | Resolution Target |
+|---|---|---|---|---|
+| High | Multiple users or critical business function affected | Department-wide outage, login issue affecting multiple users, server/service unavailable | 15 minutes | 2 business hours |
+| Medium | Single user blocked from an important work resource | Missing department drive, account lockout, access issue, VPN issue | 1 hour | 4 business hours |
+| Low | Minor issue or request with workaround available | Software request, cosmetic issue, general question | 4 business hours | 1 business day |
 
 ---
 
@@ -31,6 +42,8 @@ The goal is to practice real-world support workflows, including user intake, tro
 ## Skills Practiced
 
 - User support troubleshooting
+- SLA-based ticket prioritization
+- Impact and scope assessment
 - Active Directory account checks
 - Group membership validation
 - Mapped drive troubleshooting
