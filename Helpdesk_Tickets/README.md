@@ -37,9 +37,9 @@ The goal is to practice real-world support workflows, including user intake, imp
 |---|---|---|---|---|
 | [Ticket #001](./Tickets/Ticket001_User_Cannot_Access_Shared_Drive.md) | User cannot access Sales shared drive | Access / Permissions | Medium | Resolved |
 | [Ticket #002](./Tickets/Ticket002_User_Account_Lockout.md) | User account locked out / sign-in failure | Account / Authentication | Medium | Resolved |
-| [Ticket #003](./Tickets/Ticket003_User_Forgot_Password.md) | User forgot password | Account / Password Reset | Medium | In Progress |
+| [Ticket #003](./Tickets/Ticket003_User_Forgot_Password.md) | User forgot password | Account / Password Reset | Medium | Planned |
 | [Ticket #004](./Tickets/Ticket004_Workstation_Missing_Mapped_Drives.md) | New workstation missing mapped drives | Group Policy / Workstation OU | Medium | Planned |
-| [Ticket #005](./Tickets/Ticket005_Approved_Software_Install.md) | User cannot install approved software | Workstation / Software Support | Low | Planned |d out / sign-in failure | Account / Authentication | Medium | Resolved |
+| [Ticket #005](./Tickets/Ticket005_Approved_Software_Install.md) | User cannot install approved software | Workstation / Software Support | Low | Planned |
 
 ---
 
