@@ -219,7 +219,7 @@ Confirmed:
 
 ## Final Ticket Notes
 
-The issue was resolved by deploying approved software through the internal SteenCorp software share and completing the installation with administrative approval.
+The issue was resolved by staging the approved installer in the internal SteenCorp software share and completing the installation on Oscar’s workstation with administrative approval.
 
 This ticket demonstrated a common help desk workflow involving approved software requests, internal software staging, administrative elevation, workstation support, and least privilege enforcement.
 
