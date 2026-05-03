@@ -50,6 +50,7 @@ Simulate day-to-day help desk responsibilities by:
 - Documenting the issue, root cause, resolution, and closure notes
 
 ---
+
 ## Current Status
 
 The initial five-ticket help desk simulation is complete.
@@ -102,7 +103,8 @@ This lab includes simulated tickets across common help desk scenarios:
 - Active Directory group membership issues
 - Account lockouts
 - Password resets
-- Group Policy issues
+- DNS and hostname resolution issues
+- Basic network connectivity troubleshooting
 - Workstation support
 - Approved software installation
 - Standard user permission limitations
@@ -135,13 +137,18 @@ Each ticket follows a simple support format:
 - Active Directory user and group troubleshooting
 - Account lockout troubleshooting
 - Password reset handling
-- Group Policy validation
+- Password policy awareness
+- Group Policy refresh and validation
 - Mapped drive troubleshooting
 - NTFS and share permission validation
-- Standard user permission troubleshooting
+- DNS and hostname resolution troubleshooting
+- Basic connectivity testing using `ping` and `tracert`
+- Workstation network configuration review using `ipconfig /all`
 - Approved software installation support
-- Least privilege awareness
-- Command-line troubleshooting using `whoami`, `gpupdate`, `gpresult`, `net use`, and PowerShell
+- Standard user permission troubleshooting
+- Administrative elevation handling
+- Least privilege validation
+- Command-line troubleshooting using `whoami`, `whoami /groups`, `net use`, `gpupdate /force`, `nslookup`, `ping`, `tracert`, and PowerShell
 - Help desk-style documentation
 - User-focused issue resolution
 - Root cause documentation
