@@ -8,7 +8,6 @@
 | Status | In Progress |
 | Priority | Medium |
 | Impact | Single user affected |
-| Urgency | User can sign in, but cannot access department resource |
 | Category | Access / Mapped Drive |
 | User | Kelly Kapoor |
 | Department | Sales |
@@ -16,23 +15,14 @@
 | Affected Resource | Sales mapped drive |
 | SLA Response Target | 1 hour |
 | SLA Resolution Target | 4 business hours |
-| Update Cadence | Update user after initial investigation and after resolution |
-| Escalation Trigger | Escalate if group membership is correct but drive mapping still fails |
-| SLA Status | In Progress |
 
 ---
 
-## Scenario
+## User Report
 
-Kelly Kapoor from the Sales department reported that her Sales drive was missing after signing into her Windows 11 workstation.
+Kelly Kapoor from the Sales department reported that she could sign into her Windows 11 workstation, but her Sales mapped drive was missing from File Explorer.
 
----
-
-## Simulated Fault
-
-This issue was intentionally created by removing Kelly Kapoor from the `Sales_Users` security group in Active Directory.
-
-This simulates a common help desk access issue where a user loses access to a department resource because of incorrect or missing group membership.
+The user needs access to the Sales drive to reach department files used for daily work.
 
 ---
 
@@ -40,51 +30,79 @@ This simulates a common help desk access issue where a user loses access to a de
 
 | Check | Result |
 |---|---|
-| User can sign in | To be validated |
-| Issue affects one user | To be validated |
-| Workstation is domain joined | To be validated |
-| Other drives/resources available | To be validated |
-| Sales drive missing | To be validated |
+| User can sign in | Pending |
+| Issue affects one user | Pending |
+| Workstation is domain joined | Pending |
+| Sales drive is missing | Pending |
+| Other domain access appears functional | Pending |
 
 ---
-## SLA Classification
 
-| SLA Factor | Assessment |
+## Priority Classification
+
+| Factor | Assessment |
 |---|---|
 | Business Impact | Medium |
 | User Impact | Single Sales user unable to access department drive |
-| Workaround Available | User can sign in, but cannot access Sales shared files |
-| Response Requirement | Initial response within 1 hour |
-| Resolution Requirement | Resolve within 4 business hours if limited to group membership or drive mapping |
-| Escalation Requirement | Escalate if issue affects multiple users, the file server is unreachable, or GPO is not applying after standard troubleshooting |
+| Workaround Available | User can sign in, but cannot access Sales files |
+| Priority | Medium |
+| Reason | Important department resource unavailable for one user |
 
 ---
 
-## Troubleshooting Steps
+## Troubleshooting Plan
+
+The issue will be investigated by checking the affected user, mapped drive status, Group Policy application, and Active Directory group membership.
 
 | Step | Check Performed | Result |
 |---|---|---|
-| 1 | Signed in as affected user | Pending |
-| 2 | Checked File Explorer for mapped drives | Pending |
-| 3 | Ran `whoami` | Pending |
-| 4 | Ran `whoami /groups` | Pending |
-| 5 | Ran `gpresult /r` | Pending |
-| 6 | Checked user account in Active Directory | Pending |
-| 7 | Confirmed group membership issue | Pending |
+| 1 | Confirmed affected user can sign in | Pending |
+| 2 | Checked File Explorer for Sales mapped drive | Pending |
+| 3 | Ran `whoami` to confirm signed-in user | Pending |
+| 4 | Ran `net use` to review mapped drives | Pending |
+| 5 | Ran `gpresult /r` to review applied Group Policy | Pending |
+| 6 | Checked Kelly Kapoor’s group membership in Active Directory | Pending |
+| 7 | Confirmed whether user belongs to `Sales_Users` | Pending |
+| 8 | Applied required access correction | Pending |
+| 9 | Refreshed policy / signed user back in | Pending |
+| 10 | Confirmed Sales drive was restored | Pending |
+
+---
+
+## Commands Used
+
+| Command | Purpose |
+|---|---|
+| `whoami` | Confirm the signed-in domain user |
+| `net use` | Review mapped network drives |
+| `gpresult /r` | Review applied Group Policy settings |
+| `gpupdate /force` | Refresh Group Policy on the client workstation |
 
 ---
 
 ## Evidence
 
-Screenshots will be added after validation.
+Screenshots will be stored in:
+
+`Evidence/Helpdesk_Tickets/Ticket_001_Missing_Sales_Drive/`
 
 | Evidence | Description |
 |---|---|
-| Screenshot 1 | User group membership issue |
-| Screenshot 2 | Sales drive missing |
-| Screenshot 3 | Troubleshooting command output |
-| Screenshot 4 | User added back to security group |
-| Screenshot 5 | Sales drive restored |
+| Screenshot 1 | Kelly signed in as domain user |
+| Screenshot 2 | Sales drive missing in File Explorer |
+| Screenshot 3 | `net use` output showing mapped drive status |
+| Screenshot 4 | `gpresult /r` output showing applied policies |
+| Screenshot 5 | Active Directory group membership review |
+| Screenshot 6 | Kelly added to required Sales security group |
+| Screenshot 7 | `gpupdate /force` completed |
+| Screenshot 8 | Sales drive restored |
+| Screenshot 9 | Sales drive access confirmed |
+
+---
+
+## Investigation Notes
+
+Pending completion.
 
 ---
 
@@ -121,3 +139,4 @@ Pending completion.
 - User-side issue confirmation
 - Root cause documentation
 - Help desk ticket formatting
+- SLA-aware support documentation
