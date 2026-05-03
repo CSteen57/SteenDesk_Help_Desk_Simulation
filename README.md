@@ -32,6 +32,7 @@ The following components are reused:
 - Group Policy
 - NTFS and share permissions
 - Department-based access control
+- Standard user and admin account separation
 
 ---
 
@@ -41,7 +42,10 @@ Simulate day-to-day help desk responsibilities by:
 
 - Responding to user-reported issues
 - Troubleshooting access and configuration problems
+- Supporting Active Directory user accounts
+- Validating shared drive and login access
 - Using basic Windows and Active Directory tools
+- Applying least privilege concepts
 - Validating fixes from the user perspective
 - Documenting the issue, root cause, resolution, and closure notes
 
@@ -51,11 +55,28 @@ Simulate day-to-day help desk responsibilities by:
 
 This lab is currently in progress.
 
-The first ticket focuses on a common help desk issue:
+Completed tickets so far include:
 
-> A Sales user can sign into the domain but does not see their mapped Sales drive.
+- User cannot access Sales shared drive
+- User account lockout / sign-in failure
 
-Additional tickets will be added over time.
+Planned tickets include:
+
+- User forgot password
+- New workstation missing mapped drives
+- User cannot install approved software
+
+---
+
+## Ticket Progress
+
+| Ticket | Scenario | Status |
+|---|---|---|
+| Ticket #001 | User cannot access Sales shared drive | Resolved |
+| Ticket #002 | User account locked out / sign-in failure | Resolved |
+| Ticket #003 | User forgot password | Planned |
+| Ticket #004 | New workstation missing mapped drives | Planned |
+| Ticket #005 | User cannot install approved software | Planned |
 
 ---
 
@@ -64,21 +85,24 @@ Additional tickets will be added over time.
 | Priority | Description | Example |
 |---|---|---|
 | High | Multiple users affected or major access outage | Department unable to access shared drive |
-| Medium | Single user affected with work impact | One user missing mapped drive |
-| Low | Minor issue or request with workaround available | Desktop shortcut request |
+| Medium | Single user affected with work impact | Account lockout, password reset, shared drive access issue |
+| Low | Minor issue or request with workaround available | Approved software installation request |
 
 ---
 
 ## Ticket Categories
 
-This lab will include simulated tickets across common help desk scenarios:
+This lab includes simulated tickets across common help desk scenarios:
 
-- Access issues
-- Mapped drive issues
-- Group Policy issues
+- Shared drive access issues
+- Active Directory group membership issues
 - Account lockouts
-- Permission validation
-- Basic network troubleshooting
+- Password resets
+- Group Policy issues
+- Workstation support
+- Approved software installation
+- Standard user permission limitations
+- Least privilege validation
 
 View ticket documentation here:
 
@@ -91,27 +115,33 @@ View ticket documentation here:
 Each ticket follows a simple support format:
 
 - User Report
-- Impact
-- Priority
+- Impact and Scope
+- Priority Classification
 - Troubleshooting Steps
 - Root Cause
 - Resolution
 - Validation
 - Closure Notes
+- Screenshot Evidence
 
 ---
 
 ## Skills Demonstrated
 
 - Active Directory user and group troubleshooting
+- Account lockout troubleshooting
+- Password reset handling
 - Group Policy validation
 - Mapped drive troubleshooting
 - NTFS and share permission validation
-- Command-line troubleshooting using `whoami`, `gpupdate`, `gpresult`, and `net use`
+- Standard user permission troubleshooting
+- Approved software installation support
+- Least privilege awareness
+- Command-line troubleshooting using `whoami`, `gpupdate`, `gpresult`, `net use`, and PowerShell
 - Help desk-style documentation
 - User-focused issue resolution
+- Root cause documentation
 
----
 ---
 
 ## Project Structure
@@ -124,12 +154,22 @@ Helpdesk-Lab/
 ├── Helpdesk_Tickets/
 │   ├── README.md
 │   └── Tickets/
-│       └── Ticket_001_User_Cannot_Access_Shared_Drive.md
+│       ├── Ticket001_User_Cannot_Access_Shared_Drive.md
+│       ├── Ticket002_User_Account_Lockout.md
+│       ├── Ticket003_User_Forgot_Password.md
+│       ├── Ticket004_Workstation_Missing_Mapped_Drives.md
+│       └── Ticket005_Approved_Software_Install.md
 │
 └── Evidence/
     └── Helpdesk_Tickets/
-        └── Ticket_001_User_Cannot_Access_Shared_Drive/
+        ├── Ticket001_User_Cannot_Access_Shared_Drive/
+        ├── Ticket002_User_Account_Lockout/
+        ├── Ticket003_User_Forgot_Password/
+        ├── Ticket004_Workstation_Missing_Mapped_Drives/
+        └── Ticket005_Approved_Software_Install/
 </pre>
+
+> Note: Ticket evidence folders may be adjusted as tickets are completed and screenshots are added.
 
 ---
 
@@ -149,9 +189,10 @@ This reflects real-world help desk and MSP roles where systems are already in pl
 
 Planned additions:
 
-- Account lockout ticket
-- Access denied ticket
-- Group Policy troubleshooting ticket
-- Basic DNS/DHCP troubleshooting ticket
-- Escalation notes from Tier 1 to Tier 2
+- Additional help desk tickets
 - Remote support simulation
+- Printer troubleshooting
+- VPN access troubleshooting
+- Basic network connectivity tickets
+- Escalation notes from Tier 1 to Tier 2
+- Networking-focused lab extension after the help desk tickets are completed
