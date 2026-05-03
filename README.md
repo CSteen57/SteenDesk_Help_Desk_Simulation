@@ -50,22 +50,26 @@ Simulate day-to-day help desk responsibilities by:
 - Documenting the issue, root cause, resolution, and closure notes
 
 ---
-
 ## Current Status
 
-This lab is currently in progress.
+The initial five-ticket help desk simulation is complete.
 
-Completed tickets so far include:
+Completed tickets include:
 
 - User cannot access Sales shared drive
 - User account lockout / sign-in failure
-
-Planned tickets include:
-
 - User forgot password
-- New workstation missing mapped drives
+- User cannot access network share by hostname
 - User cannot install approved software
 
+Future planned expansion:
+
+- Workstation has domain access but no internet connectivity
+- Remote support simulation
+- Printer troubleshooting
+- VPN access troubleshooting
+- Escalation notes from Tier 1 to Tier 2
+  
 ---
 
 ## Ticket Progress
@@ -76,7 +80,7 @@ Planned tickets include:
 | Ticket #002 | User account locked out / sign-in failure | Resolved |
 | Ticket #003 | User forgot password | Resolved |
 | Ticket #004 | User cannot access network share by hostname | Resolved |
-| Ticket #005 | User cannot install approved software | Planned |
+| Ticket #005 | User cannot install approved software | Resolved |
 
 ---
 
@@ -147,7 +151,7 @@ Each ticket follows a simple support format:
 ## Project Structure
 
 <pre>
-Helpdesk-Lab/
+SteenDesk_Help_Desk_Simulation/
 │
 ├── README.md
 │
@@ -155,22 +159,19 @@ Helpdesk-Lab/
 │   ├── README.md
 │   └── Tickets/
 │       ├── Ticket001_User_Cannot_Access_Shared_Drive.md
-│       ├── Ticket002_User_Account_Lockout.md
+│       ├── Ticket002_User_Account_Locked_Out.md
 │       ├── Ticket003_User_Forgot_Password.md
-│       ├── Ticket004_Workstation_Missing_Mapped_Drives.md
+│       ├── Ticket004_User_Cannot_Access_Network_Share_by_Hostname.md
 │       └── Ticket005_Approved_Software_Install.md
 │
 └── Evidence/
     └── Helpdesk_Tickets/
         ├── Ticket001_User_Cannot_Access_Shared_Drive/
-        ├── Ticket002_User_Account_Lockout/
+        ├── Ticket002_User_Account_Locked_Out/
         ├── Ticket003_User_Forgot_Password/
-        ├── Ticket004_Workstation_Missing_Mapped_Drives/
+        ├── Ticket004_User_Cannot_Access_Network_Share_by_Hostname/
         └── Ticket005_Approved_Software_Install/
 </pre>
-
-> Note: Ticket evidence folders may be adjusted as tickets are completed and screenshots are added.
-
 ---
 
 ## Key Concept
