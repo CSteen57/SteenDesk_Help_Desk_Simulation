@@ -31,11 +31,10 @@ The goal is to practice real-world support workflows, including user intake, imp
 
 ---
 
-## Ticket Index
-
 | Ticket | Issue | Category | Priority | Status |
 |---|---|---|---|---|
 | [Ticket #001](./Tickets/Ticket001_User_Cannot_Access_Shared_Drive.md) | User cannot access Sales shared drive | Access / Permissions | Medium | Resolved |
+| [Ticket #002](./Tickets/Ticket002_User_Account_Lockout.md) | User account locked out / sign-in failure | Account / Authentication | Medium | Resolved |
 
 ---
 
