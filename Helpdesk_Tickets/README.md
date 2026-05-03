@@ -1,4 +1,4 @@
-# SteenDesk Help Desk Ticket Simulation
+# SteenDesk Help Desk Ticket Index
 
 This section documents simulated help desk tickets built on top of the SteenCorp Active Directory lab.
 
@@ -49,8 +49,15 @@ The goal is to practice real-world support workflows, including user intake, imp
 - Priority-based ticket handling
 - Impact and scope assessment
 - Active Directory account checks
+- Account lockout troubleshooting
+- Password reset handling
 - Group membership validation
 - Mapped drive troubleshooting
-- Group Policy validation
+- DNS and hostname resolution troubleshooting
+- Basic network connectivity testing
+- Workstation configuration review
+- Approved software installation support
+- Administrative elevation handling
+- Least privilege validation
 - Root cause documentation
 - Ticket documentation
