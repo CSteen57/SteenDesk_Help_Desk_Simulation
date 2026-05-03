@@ -82,7 +82,7 @@ The issue was investigated by validating the user sign-in problem, checking the 
 Screenshots are stored in:
 
 ```text
-Evidence/Helpdesk_Tickets/Ticket002_User_Account_Lockout/
+Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/
 ```
 
 | Evidence | Description |
@@ -101,7 +101,7 @@ Evidence/Helpdesk_Tickets/Ticket002_User_Account_Lockout/
 
 Kevin Malone was unable to sign into the Windows 11 workstation after repeated invalid credential attempts.
 
-![Kevin Account Locked Sign-In Error](../../Evidence/Ticket002_User_Account_Locked_Out/01_Kevin_Account_Locked_SignIn_Error.png)
+![Kevin Account Locked Sign-In Error](../../Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/01_Kevin_Account_Locked_SignIn_Error.png)
 
 ---
 
@@ -109,7 +109,7 @@ Kevin Malone was unable to sign into the Windows 11 workstation after repeated i
 
 Kevin Malone’s account was reviewed in Active Directory Users and Computers. The Account tab showed the unlock option available for administrative action.
 
-![ADUC Kevin Account Locked](../../Evidence/Ticket002_User_Account_Locked_Out/02_ADUC_Kevin_Account_Locked.png)
+![ADUC Kevin Account Locked](../../Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/02_ADUC_Kevin_Account_Locked.png)
 
 ---
 
@@ -117,7 +117,7 @@ Kevin Malone’s account was reviewed in Active Directory Users and Computers. T
 
 PowerShell was used to review Kevin Malone’s account status. The output showed repeated failed password attempts with a `BadPwdCount` value of `6`.
 
-![PowerShell Lockout Verification](../../Evidence/Ticket002_User_Account_Locked_Out/03_PowerShell_Lockout_Verification.png)
+![PowerShell Lockout Verification](../../Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/03_PowerShell_Lockout_Verification.png)
 
 ---
 
@@ -125,7 +125,7 @@ PowerShell was used to review Kevin Malone’s account status. The output showed
 
 Kevin Malone’s account lockout condition was cleared in Active Directory.
 
-![Kevin Account Unlocked](../../Evidence/Ticket002_User_Account_Locked_Out/04_Kevin_Account_Unlocked.png)
+![Kevin Account Unlocked](../../Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/04_Kevin_Account_Unlocked.png)
 
 ---
 
@@ -133,7 +133,7 @@ Kevin Malone’s account lockout condition was cleared in Active Directory.
 
 After remediation, Kevin Malone successfully signed into the workstation. The `whoami` command confirmed the signed-in domain user.
 
-![Kevin Whoami Successful Login](../../Evidence/Ticket002_User_Account_Locked_Out/05_Kevin_Whoami_Successful_Login.png)
+![Kevin Whoami Successful Login](../../Evidence/Helpdesk_Tickets/Ticket002_User_Account_Locked_Out/05_Kevin_Whoami_Successful_Login.png)
 
 ---
 
@@ -141,7 +141,7 @@ After remediation, Kevin Malone successfully signed into the workstation. The `w
 
 Kevin Malone experienced a sign-in failure after repeated invalid password attempts.
 
-PowerShell showed a `BadPwdCount` value of `6`, indicating multiple failed authentication attempts against the domain account. The issue was likely caused by the password being typed incorrectly, such as Caps Lock being enabled or the wrong password being entered repeatedly.
+PowerShell showed a `BadPwdCount` value of `6`, indicating multiple failed authentication attempts against the domain account. The issue was likely caused by repeated incorrect password attempts, such as an outdated saved password, Caps Lock being enabled, or the wrong password being entered repeatedly.
 
 ---
 
