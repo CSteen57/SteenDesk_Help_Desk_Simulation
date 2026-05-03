@@ -5,7 +5,7 @@
 | Field | Details |
 |---|---|
 | Ticket ID | Ticket #003 |
-| Status | Planned |
+| Status | Resolved |
 | Priority | Medium |
 | Impact | Single user affected |
 | Category | Account / Password Reset |
@@ -15,15 +15,15 @@
 | Affected Resource | Domain user login |
 | SLA Response Target | 1 hour |
 | SLA Resolution Target | 4 business hours |
-| Resolution Status | Pending |
+| Resolution Status | Resolved within target |
 
 ---
 
 ## User Report
 
-Phyllis Vance from the Sales department reported that she forgot her password and cannot sign into her Windows 11 workstation.
+Phyllis Vance from the Sales department reported that she forgot her password and could not sign into her Windows 11 workstation.
 
-The user needs help regaining access to her domain account and workstation.
+The user needed help regaining access to her domain account and workstation.
 
 ---
 
@@ -31,11 +31,11 @@ The user needs help regaining access to her domain account and workstation.
 
 | Check | Result |
 |---|---|
-| User unable to sign in | Pending |
-| Issue affects one user | Pending |
-| Workstation is domain joined | Pending |
-| Password reset required | Pending |
-| Other users affected | Pending |
+| User unable to sign in | Validated |
+| Issue affects one user | Validated |
+| Workstation is domain joined | Validated |
+| Password reset required | Validated |
+| Other users affected | No |
 
 ---
 
@@ -51,17 +51,24 @@ The user needs help regaining access to her domain account and workstation.
 
 ---
 
-## Planned Troubleshooting Steps
+## Troubleshooting Summary
+
+The issue was handled by confirming the failed sign-in, resetting the user’s password in Active Directory, requiring a password change at next logon, and validating successful sign-in from the Windows 11 client.
+
+During the password change process, the user initially attempted a new password that did not meet the domain password policy or password history requirements. The user then created a compliant password and completed the sign-in process successfully.
 
 | Step | Check Performed | Result |
 |---|---|---|
-| 1 | Confirm user cannot sign in | Pending |
-| 2 | Locate Phyllis Vance’s account in Active Directory | Pending |
-| 3 | Reset the user’s password | Pending |
-| 4 | Require password change at next logon | Pending |
-| 5 | User signs in with temporary password | Pending |
-| 6 | User changes password at login | Pending |
-| 7 | Run `whoami` to confirm signed-in user | Pending |
+| 1 | Confirmed user could not sign in | Completed |
+| 2 | Located Phyllis Vance’s account in Active Directory | Completed |
+| 3 | Reset the user’s password | Completed |
+| 4 | Required password change at next logon | Completed |
+| 5 | Confirmed password reset completed | Completed |
+| 6 | User signed in with temporary password | Completed |
+| 7 | User was prompted to change password | Completed |
+| 8 | User attempted password change | Initial attempt did not meet policy/history requirements |
+| 9 | User created compliant new password | Completed |
+| 10 | Ran `whoami` to confirm signed-in user | Confirmed `steencorp\pvance` |
 
 ---
 
@@ -75,7 +82,7 @@ The user needs help regaining access to her domain account and workstation.
 
 ## Evidence
 
-Screenshots will be stored in:
+Screenshots are stored in:
 
 ```text
 Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/
@@ -85,9 +92,12 @@ Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/
 |---|---|
 | Screenshot 1 | Phyllis unable to sign in |
 | Screenshot 2 | Password reset performed in Active Directory |
-| Screenshot 3 | Password change required at next logon |
-| Screenshot 4 | User prompted to change password |
-| Screenshot 5 | Successful login confirmed with `whoami` |
+| Screenshot 3 | Password change required at next logon confirmed |
+| Screenshot 4 | Password reset confirmation |
+| Screenshot 5 | User prompted to change password |
+| Screenshot 6 | Password policy/history requirement encountered |
+| Screenshot 7 | Password changed successfully |
+| Screenshot 8 | Successful login confirmed with `whoami` |
 
 ---
 
@@ -95,7 +105,7 @@ Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/
 
 ### 1. Failed Login Attempt
 
-Pending screenshot.
+Phyllis Vance was unable to sign into the Windows 11 workstation with her previous/unknown password.
 
 ![Phyllis Failed Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/01_Phyllis_Failed_Login.png)
 
@@ -103,7 +113,7 @@ Pending screenshot.
 
 ### 2. Active Directory Password Reset
 
-Pending screenshot.
+The password was reset in Active Directory Users and Computers. A temporary password was issued, and the account was configured to require a password change at next logon.
 
 ![ADUC Reset Password](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/02_ADUC_Reset_Password.png)
 
@@ -111,66 +121,96 @@ Pending screenshot.
 
 ### 3. Password Change Required at Next Logon
 
-Pending screenshot.
+Phyllis Vance’s account was reviewed to confirm that the account was configured to require a password change at next logon.
 
-![Must Change Password Next Logon](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/03_ADUC_Must_Change_Password_Next_Logon.png)
-
----
-
-### 4. User Prompted to Change Password
-
-Pending screenshot.
-
-![Phyllis Password Change Required](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/04_Phyllis_Password_Change_Required.png)
+![ADUC Must Change Password Next Logon](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/03_ADUC_Must_Change_Password_Next_Logon.png)
 
 ---
 
-### 5. Successful Login Validation
+### 4. Password Reset Confirmation
 
-Pending screenshot.
+Active Directory confirmed that the password for Phyllis Vance was changed.
 
-![Phyllis Whoami Successful Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/05_Phyllis_Whoami_Successful_Login.png)
+![Password Has Been Reset](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/04_Password_Has_Been_Reset.png)
+
+---
+
+### 5. Password Change Required on Login
+
+After signing in with the temporary password, Phyllis was prompted to change her password before accessing the workstation.
+
+![Phyllis Password Change Required](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/05_Phyllis_Password_Change_Required.png)
+
+---
+
+### 6. Password Policy / History Requirement
+
+The initial new password attempt did not meet the domain password policy or password history requirements.
+
+![Password History Requirement](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/06_Password_History.png)
+
+---
+
+### 7. Successful Password Change
+
+Phyllis created a compliant new password, and Windows confirmed that the password was changed successfully.
+
+![Successful Password Change](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/07_Successful_Password_Change.png)
+
+---
+
+### 8. Successful Login Validation
+
+After remediation, Phyllis successfully signed into the workstation. The `whoami` command confirmed the signed-in domain user.
+
+![Phyllis Whoami Successful Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/08_Phyllis_Whoami_Successful_Login.png)
 
 ---
 
 ## Root Cause
 
-Pending investigation.
-
-Expected root cause:
-
 Phyllis Vance was unable to sign into the domain because she did not know her current password.
+
+The issue required a standard Active Directory password reset and a forced password change at next logon so the user could create a new private password.
+
+A secondary password change issue occurred when the user attempted to create a new password that did not meet the domain password policy or password history requirements.
 
 ---
 
 ## Resolution
 
-Pending remediation.
+Phyllis Vance’s password was reset in Active Directory Users and Computers.
 
-Expected resolution:
+A temporary password was issued, and the account was configured to require a password change at next logon. Phyllis signed in using the temporary password and was prompted to create a new password.
 
-Phyllis Vance’s password will be reset in Active Directory Users and Computers. The account will be configured to require a password change at next logon so the user can create a new private password.
+After an initial password attempt did not meet domain policy requirements, Phyllis created a compliant password and successfully completed the login process.
 
 ---
 
 ## Validation
 
-Pending user-side validation.
+Validation was completed from the Windows 11 client.
 
-Expected validation:
+Confirmed:
 
-- Phyllis signs in using the temporary password.
-- Phyllis is prompted to change her password.
-- Phyllis successfully signs into the Windows 11 workstation.
-- The `whoami` command confirms the signed-in user as `steencorp\pvance`.
+- Phyllis Vance was unable to sign in with her previous/unknown password.
+- Phyllis’s password was reset in Active Directory.
+- A temporary password was issued.
+- The account was configured to require a password change at next logon.
+- The user was prompted to change her password during login.
+- The first new password attempt did not meet domain password policy or history requirements.
+- The user created a compliant password successfully.
+- The `whoami` command confirmed the user was signed in as `steencorp\pvance`.
 
 ---
 
 ## Final Ticket Notes
 
-Pending completion.
+The issue was resolved by resetting the user’s password in Active Directory and requiring a password change at next logon.
 
-This ticket is being used to demonstrate a common help desk workflow involving user intake, password reset handling, Active Directory account management, and user-side login validation.
+This ticket also demonstrated password policy enforcement because the user initially attempted a new password that did not meet domain requirements. After creating a compliant password, the user was able to sign in successfully.
+
+This ticket demonstrated a common help desk workflow involving user intake, password reset handling, Active Directory account management, password policy awareness, and user-side login validation.
 
 ---
 
@@ -179,6 +219,8 @@ This ticket is being used to demonstrate a common help desk workflow involving u
 - Active Directory password reset support
 - User authentication troubleshooting
 - Password change at next logon
+- Password policy awareness
+- Password history requirement troubleshooting
 - Help desk ticket documentation
 - User-side validation
 - SLA-aware support handling
