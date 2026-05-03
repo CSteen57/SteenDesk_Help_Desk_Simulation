@@ -9,8 +9,8 @@
 | Priority | Medium |
 | Impact | Single user affected |
 | Category | Account / Password Reset |
-| User | Pam Beesly |
-| Department | HR |
+| User | Phyllis Vance |
+| Department | Sales |
 | Environment | SteenCorp Windows Domain |
 | Affected Resource | Domain user login |
 | SLA Response Target | 1 hour |
@@ -21,7 +21,7 @@
 
 ## User Report
 
-Pam Beesly from the HR department reported that she forgot her password and cannot sign into her Windows 11 workstation.
+Phyllis Vance from the Sales department reported that she forgot her password and cannot sign into her Windows 11 workstation.
 
 The user needs help regaining access to her domain account and workstation.
 
@@ -56,7 +56,7 @@ The user needs help regaining access to her domain account and workstation.
 | Step | Check Performed | Result |
 |---|---|---|
 | 1 | Confirm user cannot sign in | Pending |
-| 2 | Locate Pam Beesly’s account in Active Directory | Pending |
+| 2 | Locate Phyllis Vance’s account in Active Directory | Pending |
 | 3 | Reset the user’s password | Pending |
 | 4 | Require password change at next logon | Pending |
 | 5 | User signs in with temporary password | Pending |
@@ -83,7 +83,7 @@ Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/
 
 | Evidence | Description |
 |---|---|
-| Screenshot 1 | Pam unable to sign in |
+| Screenshot 1 | Phyllis unable to sign in |
 | Screenshot 2 | Password reset performed in Active Directory |
 | Screenshot 3 | Password change required at next logon |
 | Screenshot 4 | User prompted to change password |
@@ -97,7 +97,7 @@ Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/
 
 Pending screenshot.
 
-![Pam Failed Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/01_Pam_Failed_Login.png)
+![Phyllis Failed Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/01_Phyllis_Failed_Login.png)
 
 ---
 
@@ -121,7 +121,7 @@ Pending screenshot.
 
 Pending screenshot.
 
-![Pam Password Change Required](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/04_Pam_Password_Change_Required.png)
+![Phyllis Password Change Required](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/04_Phyllis_Password_Change_Required.png)
 
 ---
 
@@ -129,7 +129,7 @@ Pending screenshot.
 
 Pending screenshot.
 
-![Pam Whoami Successful Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/05_Pam_Whoami_Successful_Login.png)
+![Phyllis Whoami Successful Login](../../Evidence/Helpdesk_Tickets/Ticket003_User_Forgot_Password/05_Phyllis_Whoami_Successful_Login.png)
 
 ---
 
@@ -139,7 +139,7 @@ Pending investigation.
 
 Expected root cause:
 
-Pam Beesly was unable to sign into the domain because she did not know her current password.
+Phyllis Vance was unable to sign into the domain because she did not know her current password.
 
 ---
 
@@ -149,7 +149,7 @@ Pending remediation.
 
 Expected resolution:
 
-Pam Beesly’s password will be reset in Active Directory Users and Computers. The account will be configured to require a password change at next logon so the user can create a new private password.
+Phyllis Vance’s password will be reset in Active Directory Users and Computers. The account will be configured to require a password change at next logon so the user can create a new private password.
 
 ---
 
@@ -159,10 +159,10 @@ Pending user-side validation.
 
 Expected validation:
 
-- Pam signs in using the temporary password.
-- Pam is prompted to change her password.
-- Pam successfully signs into the Windows 11 workstation.
-- The `whoami` command confirms the signed-in user as `steencorp\pbeesly`.
+- Phyllis signs in using the temporary password.
+- Phyllis is prompted to change her password.
+- Phyllis successfully signs into the Windows 11 workstation.
+- The `whoami` command confirms the signed-in user as `steencorp\pvance`.
 
 ---
 
