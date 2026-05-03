@@ -124,11 +124,11 @@ Helpdesk-Lab/
 ├── Helpdesk_Tickets/
 │   ├── README.md
 │   └── Tickets/
-│       └── Ticket_001_Missing_Sales_Drive.md
+│       └── Ticket_001_User_Cannot_Access_Shared_Drive.md
 │
 └── Evidence/
     └── Helpdesk_Tickets/
-        └── Ticket_001_Missing_Sales_Drive/
+        └── Ticket_001_User_Cannot_Access_Shared_Drive/
 </pre>
 
 ---
