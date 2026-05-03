@@ -74,8 +74,8 @@ Planned tickets include:
 |---|---|---|
 | Ticket #001 | User cannot access Sales shared drive | Resolved |
 | Ticket #002 | User account locked out / sign-in failure | Resolved |
-| Ticket #003 | User forgot password | Planned |
-| Ticket #004 | New workstation missing mapped drives | Planned |
+| Ticket #003 | User forgot password | Resolved |
+| Ticket #004 | User cannot access network share by hostname | Resolved |
 | Ticket #005 | User cannot install approved software | Planned |
 
 ---
