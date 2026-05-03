@@ -130,7 +130,7 @@ Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname
 
 Jim Halpert was signed into the workstation as a domain user.
 
-![Jim Whoami](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/01_Jim_Whoami.png)
+![Jim Whoami](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/01_Jim_Whoami.png)
 
 ---
 
@@ -138,7 +138,7 @@ Jim Halpert was signed into the workstation as a domain user.
 
 The network share path failed to open using the domain controller hostname.
 
-![Shared Path Not Accessible](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/02_Shared_Path_Not_Accessible.png)
+![Shared Path Not Accessible](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/02_Shared_Path_Not_Accessible.png)
 
 ---
 
@@ -146,7 +146,7 @@ The network share path failed to open using the domain controller hostname.
 
 `nslookup` failed when attempting to resolve `dc01.steencorp.local`. The output showed DNS requests timing out while using the incorrect DNS server.
 
-![Nslookup DC01 Fails](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/03_Nslookup_DC01_Fails.png)
+![Nslookup DC01 Fails](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/03_Nslookup_DC01_Fails.png)
 
 ---
 
@@ -154,7 +154,7 @@ The network share path failed to open using the domain controller hostname.
 
 The workstation DNS configuration was reviewed with `ipconfig /all`. The workstation was using `8.8.8.8` instead of the SteenCorp domain controller for DNS.
 
-![IPConfig Wrong DNS](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/04_IPConfig_Wrong_DNS.png)
+![IPConfig Wrong DNS](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/04_IPConfig_Wrong_DNS.png)
 
 ---
 
@@ -162,7 +162,7 @@ The workstation DNS configuration was reviewed with `ipconfig /all`. The worksta
 
 A ping test to the domain controller IP address succeeded. This confirmed that basic network connectivity to DC01 was working.
 
-![Ping DC01 IP Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/04A_Ping_DC01_IP_Success.png)
+![Ping DC01 IP Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/04A_Ping_DC01_IP_Success.png)
 
 ---
 
@@ -170,7 +170,7 @@ A ping test to the domain controller IP address succeeded. This confirmed that b
 
 A hostname-based ping test failed, showing that the workstation could not resolve the internal domain controller hostname.
 
-![Hostname Ping and Tracert Fails](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/04B_Hostname_Ping_&_Tracert_Fails.png)
+![Hostname Ping and Tracert Fails](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/04B_Hostname_Ping_&_Tracert_Fails.png)
 
 ---
 
@@ -178,7 +178,7 @@ A hostname-based ping test failed, showing that the workstation could not resolv
 
 A traceroute to the domain controller IP address completed successfully. This further confirmed that the workstation could reach DC01 by IP.
 
-![Tracert DC01 IP Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/04C_Tracert_DC01_IP_Success.png)
+![Tracert DC01 IP Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/04C_Tracert_DC01_IP_Success.png)
 
 ---
 
@@ -186,7 +186,7 @@ A traceroute to the domain controller IP address completed successfully. This fu
 
 The workstation DNS server was corrected to use the domain controller at `192.168.10.10`. After flushing the DNS cache, `nslookup` successfully resolved `dc01.steencorp.local`.
 
-![DNS Corrected Nslookup Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/05_DNS_Corrected_Nslookup_Success.png)
+![DNS Corrected Nslookup Success](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/05_DNS_Corrected_Nslookup_Success.png)
 
 ---
 
@@ -194,7 +194,7 @@ The workstation DNS server was corrected to use the domain controller at `192.16
 
 After DNS was corrected, Jim was able to access the main SteenCorp shared folder path by hostname.
 
-![Shared Path Access Restored](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/06_Shared_Path_Access_Restored.png)
+![Shared Path Access Restored](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/06_Shared_Path_Access_Restored.png)
 
 ---
 
@@ -202,7 +202,7 @@ After DNS was corrected, Jim was able to access the main SteenCorp shared folder
 
 Jim attempted to access the IT folder and was denied access as expected. This confirmed that restoring DNS access did not bypass role-based access controls.
 
-![IT Folder Access Denied](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/06A_Shared_Path_Access_Restored_Correct_Permissions.png)
+![IT Folder Access Denied](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/06A_Shared_Path_Access_Restored_Correct_Permissions.png)
 
 ---
 
@@ -210,7 +210,7 @@ Jim attempted to access the IT folder and was denied access as expected. This co
 
 Jim was able to access the Sales folder successfully, confirming that the correct department access was restored.
 
-![Sales Folder Access Confirmed](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/06B_Shared_Path_Access_Restored_Correct_Permissions.png)
+![Sales Folder Access Confirmed](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/06B_Shared_Path_Access_Restored_Correct_Permissions.png)
 
 ---
 
