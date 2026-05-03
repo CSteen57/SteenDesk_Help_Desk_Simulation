@@ -170,7 +170,7 @@ The Sales shared drive was still mapped to the workstation, but the user did not
 
 Kelly Kapoor was added back to the `Sales_Users` security group in Active Directory.
 
-After updating the group membership, Group Policy was refreshed using `gpupdate /force`, and access to the Sales shared drive was tested again from the Windows 11 client.
+After updating the group membership, the client session was refreshed and access to the Sales shared drive was tested again from the Windows 11 client.
 
 ---
 
