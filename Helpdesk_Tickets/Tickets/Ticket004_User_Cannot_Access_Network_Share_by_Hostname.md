@@ -105,7 +105,7 @@ The workstation was using an external DNS server instead of the SteenCorp domain
 Screenshots are stored in:
 
 ```text
-Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_By_Hostname/
+Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/
 ```
 
 | Evidence | Description |
@@ -168,7 +168,7 @@ A ping test to the domain controller IP address succeeded. This confirmed that b
 
 ### 6. Hostname Connectivity Failed
 
-A hostname-based ping test failed, showing that the workstation could not resolve the internal domain controller hostname.
+A hostname-based ping and traceroute test failed, showing that the workstation could not resolve the internal domain controller hostname.
 
 ![Hostname Ping and Tracert Fails](../../Evidence/Helpdesk_Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname/04B_Hostname_Ping_&_Tracert_Fails.png)
 
