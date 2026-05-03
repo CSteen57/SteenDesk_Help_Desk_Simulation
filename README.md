@@ -1,34 +1,37 @@
 # SteenCorp Help Desk Simulation Lab
 
-> Simulated help desk environment built on top of the SteenCorp Active Directory domain to demonstrate real-world IT support workflows, ticket handling, SLA awareness, and troubleshooting.
+> Simulated help desk lab built on top of the SteenCorp Active Directory domain to demonstrate user support, troubleshooting, documentation, and ticket resolution workflows.
 
 ---
 
 ## Overview
 
-This project extends the **SteenCorp Enterprise IT Lab** by introducing a help desk simulation environment.
+This project extends the **SteenCorp Enterprise IT Lab** by adding realistic help desk ticket scenarios.
 
-It focuses on real-world IT support scenarios where issues are reported by users, diagnosed, resolved, validated, and documented using structured troubleshooting and SLA-based prioritization.
+Instead of building a new environment from scratch, this lab uses the existing `steencorp.local` domain to simulate common IT support issues in an established Windows environment.
 
-Rather than building a new environment from scratch, this lab leverages the existing `steencorp.local` domain to simulate how support teams operate within an established infrastructure.
+The focus of this lab is simple:
+
+> Receive a user issue, troubleshoot it, resolve it, validate the fix, and document the work clearly.
 
 ---
 
 ## Relationship to SteenCorp Lab
 
-This lab is built directly on top of the existing domain environment:
+This lab is built directly on top of the existing SteenCorp Active Directory environment:
 
-👉 [SteenCorp Enterprise IT Lab](https://github.com/CSteen57/SteenCorp-AD-Lab)
+[SteenCorp Enterprise IT Lab](https://github.com/CSteen57/SteenCorp-AD-Lab)
 
 The following components are reused:
 
-- Active Directory Domain (`steencorp.local`)
-- Organizational Unit (OU) structure
-- Security groups and RBAC model
-- Group Policy configurations
-- Domain-joined client systems
-
-This allows for realistic support scenarios instead of isolated test cases.
+- Active Directory Domain: `steencorp.local`
+- Windows Server 2022 Domain Controller
+- Windows 11 domain-joined client
+- Organizational Units
+- Security groups
+- Group Policy
+- NTFS and share permissions
+- Department-based access control
 
 ---
 
@@ -37,78 +40,83 @@ This allows for realistic support scenarios instead of isolated test cases.
 Simulate day-to-day help desk responsibilities by:
 
 - Responding to user-reported issues
-- Diagnosing system and access problems
-- Applying structured troubleshooting methodology
-- Resolving incidents within defined SLA targets
+- Troubleshooting access and configuration problems
+- Using basic Windows and Active Directory tools
 - Validating fixes from the user perspective
-- Documenting ticket activity clearly and professionally
+- Documenting the issue, root cause, resolution, and closure notes
 
 ---
 
 ## Current Status
 
-This project is currently in progress.
+This lab is currently in progress.
 
-The first ticket simulation focuses on a user access issue involving a missing mapped drive. Additional tickets will be added as the lab expands into Group Policy, account lockout, DNS/DHCP, and escalation scenarios.
+The first ticket focuses on a common help desk issue:
+
+> A Sales user can sign into the domain but does not see their mapped Sales drive.
+
+Additional tickets will be added over time.
 
 ---
 
-## SLA Policy
+## Ticket Priority Guide
 
-| Priority | Description | Response Time | Resolution Time |
-|--------|------------|--------------|----------------|
-| High | Critical issue affecting login, access, or multiple users | 15 minutes | 2 hours |
-| Medium | Single-user issue affecting important work resources | 1 hour | 4 hours |
-| Low | Minor issue or request with workaround available | 4 hours | 1 business day |
+| Priority | Description | Example |
+|---|---|---|
+| High | Multiple users affected or major access outage | Department unable to access shared drive |
+| Medium | Single user affected with work impact | One user missing mapped drive |
+| Low | Minor issue or request with workaround available | Desktop shortcut request |
 
 ---
 
 ## Ticket Categories
 
-This lab includes simulated tickets across common help desk scenarios:
+This lab will include simulated tickets across common help desk scenarios:
 
-- Access Issues (RBAC, permissions, mapped drives)
-- Group Policy Issues (GPO not applying)
-- Account Issues (lockouts, login failures)
-- Network Issues (DHCP, DNS misconfigurations)
-- System Configuration Issues (local settings, elevation)
+- Access issues
+- Mapped drive issues
+- Group Policy issues
+- Account lockouts
+- Permission validation
+- Basic network troubleshooting
 
 View ticket documentation here:
 
-👉 [Helpdesk Ticket Index](./Helpdesk_Tickets/README.md)
+[Help Desk Ticket Index](./Helpdesk_Tickets/README.md)
 
 ---
 
-## Ticket Structure
+## Ticket Documentation Format
 
-Each ticket follows a standardized support format:
+Each ticket follows a simple support format:
 
 - User Report
-- Impact & Scope
-- Priority & SLA Classification
-- Investigation Steps
+- Impact
+- Priority
+- Troubleshooting Steps
 - Root Cause
 - Resolution
 - Validation
-- Ticket Closure Notes
+- Closure Notes
 
 ---
 
-## Example Skills Demonstrated
+## Skills Demonstrated
 
-- Active Directory user and group management
-- Group Policy troubleshooting
-- Network diagnostics involving DNS and DHCP
-- Command-line troubleshooting using `whoami`, `gpresult`, and `ipconfig`
-- Ticket prioritization and SLA awareness
-- End-user issue resolution
-- Technical documentation
+- Active Directory user and group troubleshooting
+- Group Policy validation
+- Mapped drive troubleshooting
+- NTFS and share permission validation
+- Command-line troubleshooting using `whoami`, `gpupdate`, `gpresult`, and `net use`
+- Help desk-style documentation
+- User-focused issue resolution
 
+---
 ---
 
 ## Project Structure
 
-```plaintext
+<pre>
 Helpdesk-Lab/
 │
 ├── README.md
@@ -116,15 +124,13 @@ Helpdesk-Lab/
 ├── Helpdesk_Tickets/
 │   ├── README.md
 │   └── Tickets/
-│       ├── Ticket_001_Missing_Sales_Drive.md
-│       ├── Ticket_002_GPO_Issue.md
-│       └── Ticket_003_Account_Lockout.md
+│       └── Ticket_001_Missing_Sales_Drive.md
 │
 └── Evidence/
     └── Helpdesk_Tickets/
-        ├── Ticket_001_Missing_Sales_Drive/
-        ├── Ticket_002_GPO_Issue/
-        └── Ticket_003_Account_Lockout/
+        └── Ticket_001_Missing_Sales_Drive/
+</pre>
+
 ---
 
 ## Key Concept
@@ -133,9 +139,9 @@ This lab is not focused on building infrastructure from scratch.
 
 It is focused on:
 
-> Supporting, troubleshooting, and maintaining an existing environment
+> Supporting, troubleshooting, and maintaining an existing environment.
 
-This reflects real-world help desk and MSP roles where systems are already in place and require ongoing support, documentation, escalation, and user-focused troubleshooting.
+This reflects real-world help desk and MSP roles where systems are already in place and technicians are responsible for resolving user issues, documenting work, and validating fixes.
 
 ---
 
@@ -143,10 +149,9 @@ This reflects real-world help desk and MSP roles where systems are already in pl
 
 Planned additions:
 
-- Ticket escalation scenarios from Tier 1 to Tier 2
+- Account lockout ticket
+- Access denied ticket
+- Group Policy troubleshooting ticket
+- Basic DNS/DHCP troubleshooting ticket
+- Escalation notes from Tier 1 to Tier 2
 - Remote support simulation
-- More complex multi-layer troubleshooting
-- Integration with logging or monitoring tools
-- Additional access, account, network, and workstation support scenarios
-
-Additional tickets and scenarios will be added over time.
