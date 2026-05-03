@@ -35,7 +35,7 @@ The goal is to practice real-world support workflows, including user intake, imp
 
 | Ticket | Issue | Category | Priority | Status |
 |---|---|---|---|---|
-| [Ticket #001](./Tickets/Ticket_001_Missing_Sales_Drive.md) | User missing Sales drive | Access / Mapped Drive | Medium | In Progress |
+| [Ticket #001](./Tickets/Ticket001_User_Cannot_Access_Shared_Drive.md) | User cannot access Sales shared drive | Access / Permissions | Medium | Resolved |
 
 ---
 
