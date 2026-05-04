@@ -171,7 +171,7 @@ Evidence/Helpdesk_Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet/
 
 Mike Ross was signed into the workstation as `steencorp\mross`. The workstation had a valid domain DHCP lease, but Chrome could not reach Google.
 
-![Mike Ross IPConfig Internet Failure Before Fix](../../Evidence/Helpdesk_Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet/01_Mike_Ross_IPConfig_Internet_Failure_Before_Fix.png)
+![Mike Ross IPConfig Internet Failure Before Fix](../../Evidence/Helpdesk_Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet/01_Client_IPConfig_Before_Fix_W_whoami.png)
 
 ---
 
