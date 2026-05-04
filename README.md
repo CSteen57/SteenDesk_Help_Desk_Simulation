@@ -2,8 +2,6 @@
 
 > Simulated help desk lab built on top of the SteenCorp Active Directory domain to demonstrate user support, troubleshooting, documentation, and ticket resolution workflows.
 
-![SteenCorp Help Desk Simulation Lab](./SteenDesk_Help_Desk_Banner.jpg)
-
 ---
 
 ## Overview
@@ -28,12 +26,14 @@ The following components are reused:
 
 - Active Directory Domain: `steencorp.local`
 - Windows Server 2022 Domain Controller
-- Windows 11 domain-joined client
+- Windows 11 domain-joined clients
 - Organizational Units
 - Security groups
 - Group Policy
 - NTFS and share permissions
 - Department-based access control
+- DHCP and DNS services
+- VMware Workstation virtual networking
 - Standard user and admin account separation
 
 ---
@@ -46,7 +46,8 @@ Simulate day-to-day help desk responsibilities by:
 - Troubleshooting access and configuration problems
 - Supporting Active Directory user accounts
 - Validating shared drive and login access
-- Using basic Windows and Active Directory tools
+- Troubleshooting DNS, DHCP, and internet connectivity issues
+- Using basic Windows, Active Directory, and VMware tools
 - Applying least privilege concepts
 - Validating fixes from the user perspective
 - Documenting the issue, root cause, resolution, and closure notes
@@ -55,24 +56,16 @@ Simulate day-to-day help desk responsibilities by:
 
 ## Current Status
 
-The initial five-ticket help desk simulation is complete.
+This lab is currently in progress.
 
-Completed tickets include:
+Completed tickets so far include:
 
 - User cannot access Sales shared drive
 - User account lockout / sign-in failure
 - User forgot password
 - User cannot access network share by hostname
 - User cannot install approved software
-
-Future planned expansion:
-
-- Workstation has domain access but no internet connectivity
-- Remote support simulation
-- Printer troubleshooting
-- VPN access troubleshooting
-- Additional networking-related support tickets based on the SteenCorp Network Segmentation Lab
-- Escalation notes from Tier 1 to Tier 2
+- User cannot access internet
 
 ---
 
@@ -85,6 +78,7 @@ Future planned expansion:
 | Ticket #003 | User forgot password | Resolved |
 | Ticket #004 | User cannot access network share by hostname | Resolved |
 | Ticket #005 | User cannot install approved software | Resolved |
+| Ticket #006 | User cannot access internet | Resolved |
 
 ---
 
@@ -93,7 +87,7 @@ Future planned expansion:
 | Priority | Description | Example |
 |---|---|---|
 | High | Multiple users affected or major access outage | Department unable to access shared drive |
-| Medium | Single user affected with work impact | Account lockout, password reset, shared drive access issue |
+| Medium | Single user affected with work impact | Account lockout, password reset, shared drive access issue, DNS issue, internet connectivity issue |
 | Low | Minor issue or request with workaround available | Approved software installation request |
 
 ---
@@ -106,8 +100,11 @@ This lab includes simulated tickets across common help desk scenarios:
 - Active Directory group membership issues
 - Account lockouts
 - Password resets
+- Group Policy issues
 - DNS and hostname resolution issues
-- Basic network connectivity troubleshooting
+- DHCP and gateway troubleshooting
+- Internet connectivity issues
+- VMware NAT troubleshooting
 - Workstation support
 - Approved software installation
 - Standard user permission limitations
@@ -140,18 +137,19 @@ Each ticket follows a simple support format:
 - Active Directory user and group troubleshooting
 - Account lockout troubleshooting
 - Password reset handling
-- Password policy awareness
-- Group Policy refresh and validation
+- Group Policy validation
 - Mapped drive troubleshooting
 - NTFS and share permission validation
-- DNS and hostname resolution troubleshooting
-- Basic connectivity testing using `ping` and `tracert`
-- Workstation network configuration review using `ipconfig /all`
-- Approved software installation support
+- DNS troubleshooting
+- Hostname resolution testing
+- DHCP scope option troubleshooting
+- VMware Workstation virtual network troubleshooting
+- NAT gateway validation
+- Internet connectivity testing
 - Standard user permission troubleshooting
-- Administrative elevation handling
-- Least privilege validation
-- Command-line troubleshooting using `whoami`, `whoami /groups`, `net use`, `gpupdate /force`, `nslookup`, `ping`, `tracert`, and PowerShell
+- Approved software installation support
+- Least privilege awareness
+- Command-line troubleshooting using `whoami`, `ipconfig`, `ping`, `nslookup`, `gpupdate`, `gpresult`, `net use`, and PowerShell
 - Help desk-style documentation
 - User-focused issue resolution
 - Root cause documentation
@@ -161,28 +159,31 @@ Each ticket follows a simple support format:
 ## Project Structure
 
 <pre>
-SteenDesk_Help_Desk_Simulation/
+Helpdesk-Lab/
 │
 ├── README.md
-├── SteenDesk_Help_Desk_Banner.jpg
 │
 ├── Helpdesk_Tickets/
 │   ├── README.md
 │   └── Tickets/
 │       ├── Ticket001_User_Cannot_Access_Shared_Drive.md
-│       ├── Ticket002_User_Account_Locked_Out.md
+│       ├── Ticket002_User_Account_Lockout.md
 │       ├── Ticket003_User_Forgot_Password.md
-│       ├── Ticket004_User_Cannot_Access_Network_Share_by_Hostname.md
-│       └── Ticket005_Approved_Software_Install.md
+│       ├── Ticket004_User_Cannot_Access_Network_Share_By_Hostname.md
+│       ├── Ticket005_Approved_Software_Install.md
+│       └── Ticket006_Mike_Ross_Cannot_Access_Internet.md
 │
 └── Evidence/
     └── Helpdesk_Tickets/
         ├── Ticket001_User_Cannot_Access_Shared_Drive/
-        ├── Ticket002_User_Account_Locked_Out/
+        ├── Ticket002_User_Account_Lockout/
         ├── Ticket003_User_Forgot_Password/
         ├── Ticket004_User_Cannot_Access_Network_Share_by_Hostname/
-        └── Ticket005_Approved_Software_Install/
+        ├── Ticket005_Approved_Software_Install/
+        └── Ticket006_Mike_Ross_Cannot_Access_Internet/
 </pre>
+
+> Note: Ticket evidence folders may be adjusted as tickets are completed and screenshots are added.
 
 ---
 
@@ -194,7 +195,7 @@ It is focused on:
 
 > Supporting, troubleshooting, and maintaining an existing environment.
 
-This reflects real-world help desk and MSP roles where systems are already in place and technicians are responsible for resolving user issues, documenting work, and validating fixes.
+This reflects real-world help desk and MSP roles where systems are already in place and technicians are responsible for resolving user issues, documenting work, validating fixes, and escalating when needed.
 
 ---
 
@@ -206,6 +207,6 @@ Planned additions:
 - Remote support simulation
 - Printer troubleshooting
 - VPN access troubleshooting
-- Basic network connectivity tickets
-- Additional networking-related support tickets based on the SteenCorp Network Segmentation Lab
-- Escalation notes from Tier 1 to Tier 2
+- Basic escalation notes from Tier 1 to Tier 2
+- Networking-focused lab extension after the help desk tickets are completed
+- Security monitoring or SIEM-focused ticket scenarios
