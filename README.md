@@ -71,8 +71,9 @@ Future planned expansion:
 - Remote support simulation
 - Printer troubleshooting
 - VPN access troubleshooting
+- Additional networking-related support tickets based on the SteenCorp Network Segmentation Lab
 - Escalation notes from Tier 1 to Tier 2
-  
+
 ---
 
 ## Ticket Progress
@@ -163,6 +164,7 @@ Each ticket follows a simple support format:
 SteenDesk_Help_Desk_Simulation/
 │
 ├── README.md
+├── SteenDesk_Help_Desk_Banner.jpg
 │
 ├── Helpdesk_Tickets/
 │   ├── README.md
@@ -181,6 +183,7 @@ SteenDesk_Help_Desk_Simulation/
         ├── Ticket004_User_Cannot_Access_Network_Share_by_Hostname/
         └── Ticket005_Approved_Software_Install/
 </pre>
+
 ---
 
 ## Key Concept
@@ -204,5 +207,5 @@ Planned additions:
 - Printer troubleshooting
 - VPN access troubleshooting
 - Basic network connectivity tickets
+- Additional networking-related support tickets based on the SteenCorp Network Segmentation Lab
 - Escalation notes from Tier 1 to Tier 2
-- Networking-focused lab extension after the help desk tickets are completed
