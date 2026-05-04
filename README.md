@@ -2,6 +2,8 @@
 
 > Simulated help desk lab built on top of the SteenCorp Active Directory domain to demonstrate user support, troubleshooting, documentation, and ticket resolution workflows.
 
+![SteenCorp Help Desk Simulation Lab](./SteenDesk_Help_Desk_Banner.jpg)
+
 ---
 
 ## Overview
