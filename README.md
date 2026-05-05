@@ -35,12 +35,12 @@ Each ticket follows a support workflow that includes user intake, impact assessm
 
 | Ticket | Issue | Category | Priority | Status |
 |---|---|---|---|---|
-| [Ticket #001](./Tickets/Ticket001_User_Cannot_Access_Shared_Drive.md) | User cannot access Sales shared drive | Access / Permissions | Medium | Resolved |
-| [Ticket #002](./Tickets/Ticket002_User_Account_Lockout.md) | User account locked out / sign-in failure | Account / Authentication | Medium | Resolved |
-| [Ticket #003](./Tickets/Ticket003_User_Forgot_Password.md) | User forgot password | Account / Password Reset | Medium | Resolved |
+| [Ticket #001](./Helpdesk_Tickets/Tickets/Ticket001_User_Cannot_Access_Shared_Drive.md) | User cannot access Sales shared drive | Access / Permissions | Medium | Resolved |
+| [Ticket #002](./Helpdesk_Tickets/Tickets/Ticket002_User_Account_Lockout.md) | User account locked out / sign-in failure | Account / Authentication | Medium | Resolved |
+| [Ticket #003](./Helpdesk_Tickets/Tickets/Ticket003_User_Forgot_Password.md) | User forgot password | Account / Password Reset | Medium | Resolved |
 | [Ticket #004](./Helpdesk_Tickets/Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname.md) | User cannot access network share by hostname | Network / DNS / Shared Resource Access | Medium | Resolved |
-| [Ticket #005](./Tickets/Ticket005_Approved_Software_Install.md) | User cannot install approved software | Workstation / Software Support | Low | Resolved |
-| [Ticket #006](./Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet.md) | User cannot access internet | Network / Internet Connectivity / VMware NAT | Medium | Resolved |
+| [Ticket #005](./Helpdesk_Tickets/Tickets/Ticket005_Approved_Software_Install.md) | User cannot install approved software | Workstation / Software Support | Low | Resolved |
+| [Ticket #006](./Helpdesk_Tickets/Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet.md) | User cannot access internet | Network / Internet Connectivity / VMware NAT | Medium | Resolved |
 
 ---
 
