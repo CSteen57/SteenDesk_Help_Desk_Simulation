@@ -2,7 +2,7 @@
 
 This section documents simulated help desk tickets built on top of the SteenCorp Active Directory lab.
 
-The goal is to practice real-world support workflows, including user intake, impact assessment, priority classification, troubleshooting, root cause analysis, resolution, validation, and ticket documentation.
+Each ticket follows a support workflow that includes user intake, impact assessment, priority classification, troubleshooting, root cause analysis, resolution, validation, and closure.
 
 ---
 
@@ -49,7 +49,7 @@ The goal is to practice real-world support workflows, including user intake, imp
 | Ticket | Main Skill Area | Key Takeaway |
 |---|---|---|
 | Ticket #001 | Shared drive access | Validated mapped drive access, group membership, and permissions |
-| Ticket #002 | Account lockout | Investigated failed login attempts and cleared an AD account lockout |
+| Ticket #002 | Account lockout | Investigated failed login attempts and cleared an Active Directory account lockout |
 | Ticket #003 | Password reset | Reset a user password and validated password policy behavior |
 | Ticket #004 | DNS troubleshooting | Corrected workstation DNS so hostname-based share access worked |
 | Ticket #005 | Approved software install | Installed approved software while maintaining least privilege |
