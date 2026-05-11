@@ -1,0 +1,1 @@
+﻿New-Item -ItemType Directory -Path "C:\SteenCorp_Shares\IT\Device_Backups\Stanley_Hudson_WK02" -Force
