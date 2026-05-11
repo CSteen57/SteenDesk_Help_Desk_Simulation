@@ -124,10 +124,16 @@ The issue was handled by preserving Stanley Hudson’s user data from the origin
 
 ## Evidence
 
-Screenshots are stored in:
+Screenshots and scripts are stored in:
 
 ```text
-Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/
+Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/
+```
+
+Scripts are stored in:
+
+```text
+Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/Scripts/
 ```
 
 | Evidence | Description |
@@ -150,13 +156,19 @@ Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/
 
 ---
 
-## Screenshot Evidence
+## Evidence and Scripts
 
 ### 1. Stanley Test File Created Using PowerShell
 
 PowerShell was used to create a test folder and test file in Stanley Hudson’s user profile on the original workstation.
 
-![Create Stanley Test File Using PowerShell](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/00_Create_Stanley_Test_File_Using_Powershell.png)
+This simulated user-specific data that needed to be preserved before the defective workstation was replaced.
+
+**Script Used:**  
+[01_Create_Stanley_Test_File.ps1](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/Scripts/01_Create_Stanley_Test_File.ps1)
+
+**Evidence:**  
+![Create Stanley Test File Using PowerShell](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/00_Create_Stanley_Test_File_Using_Powershell.png)
 
 ---
 
@@ -166,7 +178,8 @@ The test file was validated on the original workstation before redeployment.
 
 This confirmed that Stanley had user-specific data that needed to be preserved.
 
-![Stanley Test File on Original Workstation](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/01_Stanley_Test_File_On_Original_Workstation.png)
+**Evidence:**  
+![Stanley Test File on Original Workstation](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/01_Stanley_Test_File_On_Original_Workstation.png)
 
 ---
 
@@ -180,7 +193,11 @@ Backup path:
 \\DC01\SteenCorp_Shares\IT\Device_Backups\Stanley_Hudson_WK02
 ```
 
-![Backup Folder Created on DC01](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/02_Backup_Folder_Created_On_DC01.png)
+**Script Used:**  
+[02_Backup_Folder_Created_On_DC01.ps1](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/Scripts/02_Backup_Folder_Created_On_DC01.ps1)
+
+**Evidence:**  
+![Backup Folder Created on DC01](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/02_Backup_Folder_Created_On_DC01.png)
 
 ---
 
@@ -188,7 +205,10 @@ Backup path:
 
 Stanley’s local test file was copied from the original workstation to the IT backup location on DC01.
 
-![Stanley File Backed Up to Network Share](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/03_Stanley_File_Backed_Up_To_Network_Share.png)
+This preserved the user file before the defective workstation was removed from active service.
+
+**Evidence:**  
+![Stanley File Backed Up to Network Share](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/03_Stanley_File_Backed_Up_To_Network_Share.png)
 
 ---
 
@@ -198,7 +218,8 @@ A VMware snapshot was taken of `SC-WIN11-WK02` before redeployment.
 
 This preserved the old workstation state before the replacement device was prepared.
 
-![WK02 Pre-Redeployment Snapshot Created](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/04_WK02_Pre_Redeployment_Snapshot_Created.png)
+**Evidence:**  
+![WK02 Pre-Redeployment Snapshot Created](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/04_WK02_Pre_Redeployment_Snapshot_Created.png)
 
 ---
 
@@ -208,7 +229,8 @@ This preserved the old workstation state before the replacement device was prepa
 
 The original workstation, `SC-WIN11-WK02`, was treated as defective and removed from active service for this ticket.
 
-![WK03 Replacement Workstation Created](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/05_WK03_Created_From_Clean_Baseline.png)
+**Evidence:**  
+![WK03 Replacement Workstation Created](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/05_WK03_Created_From_Clean_Baseline.png)
 
 ---
 
@@ -225,7 +247,8 @@ Validated:
 - Connectivity to DC01
 - Domain DNS resolution
 
-![WK03 Network Configuration Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/06_WK03_Network_Configuration_Validated.png)
+**Evidence:**  
+![WK03 Network Configuration Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/06_WK03_Network_Configuration_Validated.png)
 
 ---
 
@@ -233,7 +256,11 @@ Validated:
 
 The replacement workstation name was validated as `SC-WIN11-WK03`.
 
-![WK03 Renamed](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/07_WK03_Renamed.png)
+**Script Used:**  
+[03_Rename_Workstation_WK03.ps1](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/Scripts/03_Rename_Workstation_WK03.ps1)
+
+**Evidence:**  
+![WK03 Renamed](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/07_WK03_Renamed.png)
 
 ---
 
@@ -241,7 +268,8 @@ The replacement workstation name was validated as `SC-WIN11-WK03`.
 
 The replacement workstation was validated as joined to the SteenCorp domain.
 
-![WK03 Domain Membership Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/08_WK03_Domain_Membership_Validated.png)
+**Evidence:**  
+![WK03 Domain Membership Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/08_WK03_Domain_Membership_Validated.png)
 
 ---
 
@@ -249,7 +277,10 @@ The replacement workstation was validated as joined to the SteenCorp domain.
 
 `SC-WIN11-WK03` was confirmed in the correct Active Directory Workstations OU.
 
-![WK03 Computer Object Validated in Workstations OU](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/09_WK03_Moved_To_Workstations_OU.png)
+This confirmed the replacement workstation was positioned to receive the correct workstation policies.
+
+**Evidence:**  
+![WK03 Computer Object Validated in Workstations OU](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/09_WK03_Moved_To_Workstations_OU.png)
 
 ---
 
@@ -264,7 +295,8 @@ GPO_SteenCorp_Master_Drive_Map
 SteenCorp_Wallpaper_Policy
 ```
 
-![WK03 Group Policy Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/10_WK03_Group_Policy_Validated.png)
+**Evidence:**  
+![WK03 Group Policy Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/10_WK03_Group_Policy_Validated..png)
 
 ---
 
@@ -274,7 +306,11 @@ Stanley’s backed-up test file was restored to his profile on the replacement w
 
 The restored file opened successfully, confirming that the backup and restore process worked.
 
-![Stanley File Restored on WK03](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/11_Stanley_File_Restored_On_WK03.png)
+**Script Used:**  
+[05_Restore_Stanley_Test_File.ps1](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/Scripts/05_Restore_Stanley_Test_File.ps1)
+
+**Evidence:**  
+![Stanley File Restored on WK03](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/11_Stanley_File_Restored_On_WK03.png)
 
 ---
 
@@ -291,7 +327,8 @@ Validated mapped drives:
 
 The Sales folder was also opened successfully.
 
-![Stanley Mapped Drives Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/12_Stanley_Mapped_Drives_Validated.png)
+**Evidence:**  
+![Stanley Mapped Drives Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/12_Stanley_Mapped_Drives_Validated.png)
 
 ---
 
@@ -301,7 +338,8 @@ The HR share was tested from Command Prompt.
 
 The command returned `File Not Found`, which showed that the path was reachable but did not confirm an access denial from the command line.
 
-![Stanley HR Access Not Found](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/13_Stanley_HR_Access_Not_Found.png)
+**Evidence:**  
+![Stanley HR Access Not Found](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/13_Stanley_HR_Access_Not_Found.png)
 
 ---
 
@@ -313,7 +351,8 @@ Windows returned a permission error stating that Stanley did not have permission
 
 This confirmed that Stanley’s replacement workstation restored Sales access without granting unauthorized HR access.
 
-![Stanley HR Access Restricted](../../Evidence/Helpdesk_Tickets/Ticket007_Workstation_Imaging_Redeployment/13B_Stanley_HR_NonAccessable.png)
+**Evidence:**  
+![Stanley HR Access Restricted](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/13B_Stanley_HR_NonAccessable.png)
 
 ---
 
