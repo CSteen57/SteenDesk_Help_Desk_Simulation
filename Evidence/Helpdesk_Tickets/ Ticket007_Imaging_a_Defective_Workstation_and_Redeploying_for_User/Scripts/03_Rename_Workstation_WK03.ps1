@@ -1,1 +1,0 @@
-﻿Rename-Computer -NewName "SC-WIN11-WK03" -Restart
