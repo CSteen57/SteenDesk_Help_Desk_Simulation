@@ -4,7 +4,7 @@
 
 SteenDesk is a help desk ticket simulation built on top of my SteenCorp Active Directory lab.
 
-The project documents common entry-level IT support issues in a Windows domain environment, including account lockouts, password resets, mapped drive issues, DNS troubleshooting, approved software installation, and internet connectivity problems.
+The project documents common entry-level IT support issues in a Windows domain environment, including account lockouts, password resets, mapped drive issues, DNS troubleshooting, approved software installation, internet connectivity problems, and workstation redeployment.
 
 [View the full ticket workflow and ticket index](./Helpdesk_Tickets/README.md)
 
@@ -47,6 +47,7 @@ This project uses the SteenCorp Active Directory lab as the underlying environme
 | Ticket #004 | User cannot access network share by hostname | DNS / hostname resolution |
 | Ticket #005 | User cannot install approved software | Software support / least privilege |
 | Ticket #006 | User cannot access internet | VMware NAT / gateway troubleshooting |
+| Ticket #007 | Defective workstation redeployed for user | Workstation imaging / user data restore |
 
 [Open the ticket directory](./Helpdesk_Tickets/README.md)
 
@@ -60,14 +61,21 @@ This project uses the SteenCorp Active Directory lab as the underlying environme
 - Mapped drive troubleshooting
 - DNS and hostname resolution testing
 - DHCP and gateway validation
-- Group Policy troubleshooting
+- VMware NAT troubleshooting
+- Workstation imaging and redeployment workflow
+- User data backup and restore
+- VMware snapshot usage
+- Basic PowerShell support tasks
+- Group Policy troubleshooting and validation
 - Standard user permission validation
+- Least privilege validation
 - Root cause documentation
+- User-side validation
 
 ---
 
 ## Status
 
-Six help desk tickets have been completed and documented.
+Seven help desk tickets have been completed and documented.
 
-Future tickets may include printer support, Microsoft 365 troubleshooting, VPN access, endpoint security alerts, and escalation examples.
+Future tickets may include printer support, Microsoft 365 troubleshooting, VPN access, endpoint security alerts, remote support workflows, and escalation examples.
