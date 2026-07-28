@@ -1,4 +1,4 @@
-# Ticket #007 – Imaging a Defective Workstation and Redeploying for User
+# Ticket #007 – Replacing a Defective Workstation and Redeploying for User
 
 ## Ticket Summary
 
@@ -15,9 +15,6 @@
 | Original Device | `SC-WIN11-WK02` |
 | Replacement Device | `SC-WIN11-WK03` |
 | Affected Resource | User workstation access, Sales mapped drive, restored user file |
-| SLA Response Target | 1 hour |
-| SLA Resolution Target | 4 business hours |
-| Resolution Status | Resolved within target |
 
 ---
 
@@ -43,7 +40,7 @@ The user needed a replacement workstation prepared so he could sign into the Ste
 
 ---
 
-## Imaging and Redeployment Method
+## Replacement and Redeployment Method
 
 In this lab, VMware virtual machines were used to simulate physical workstations.
 
@@ -151,7 +148,7 @@ Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploy
 | Screenshot 10 | Group Policy validated for Stanley |
 | Screenshot 11 | Stanley’s file restored on WK03 |
 | Screenshot 12 | Stanley’s mapped drives and Sales access validated |
-| Screenshot 13 | HR share command-line test returned no files |
+| Screenshot 13 | HR share command-line test returned `File Not Found` and was inconclusive |
 | Screenshot 13B | HR share access restricted through File Explorer |
 
 ---
@@ -296,7 +293,7 @@ SteenCorp_Wallpaper_Policy
 ```
 
 **Evidence:**  
-![WK03 Group Policy Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/10_WK03_Group_Policy_Validated..png)
+![WK03 Group Policy Validated](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/10_WK03_Group_Policy_Validated.png)
 
 ---
 
@@ -352,7 +349,7 @@ Windows returned a permission error stating that Stanley did not have permission
 This confirmed that Stanley’s replacement workstation restored Sales access without granting unauthorized HR access.
 
 **Evidence:**  
-![Stanley HR Access Restricted](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/13B_Stanley_HR_NonAccessable.png)
+![Stanley HR Access Restricted](../../Evidence/Helpdesk_Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User/13B_Stanley_HR_Access_Denied.png)
 
 ---
 
@@ -404,7 +401,7 @@ Because this was a VMware-based lab simulation, the replacement workstation was 
 
 ## Skills Demonstrated
 
-- Workstation imaging and redeployment workflow
+- Workstation replacement and redeployment workflow
 - User data backup and restore
 - VMware snapshot usage
 - Basic PowerShell file creation and copy commands
@@ -418,4 +415,3 @@ Because this was a VMware-based lab simulation, the replacement workstation was 
 - Least privilege validation
 - Help desk ticket documentation
 - User-side validation
-- SLA-aware support handling

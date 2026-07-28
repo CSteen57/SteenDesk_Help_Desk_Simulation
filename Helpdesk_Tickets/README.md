@@ -16,7 +16,7 @@ Each ticket documents the user report, impact, troubleshooting process, root cau
 | [Ticket #004](./Tickets/Ticket004_User_Cannot_Access_Network_Share_by_Hostname.md) | User cannot access network share by hostname | Network / DNS / Shared Resource Access | Medium | Resolved |
 | [Ticket #005](./Tickets/Ticket005_Approved_Software_Install.md) | User cannot install approved software | Workstation / Software Support | Low | Resolved |
 | [Ticket #006](./Tickets/Ticket006_Mike_Ross_Cannot_Access_Internet.md) | User cannot access internet | Network / Internet Connectivity / VMware NAT | Medium | Resolved |
-| [Ticket #007](./Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User.md) | Defective workstation redeployed for user | Hardware / Workstation Deployment | Medium | Resolved |
+| [Ticket #007](./Tickets/Ticket007_Imaging_a_Defective_Workstation_and_Redeploying_for_User.md) | Defective workstation replaced and redeployed | Hardware / Workstation Deployment | Medium | Resolved |
 
 ---
 
@@ -62,7 +62,7 @@ Each ticket follows this general structure:
 - DHCP and gateway validation
 - VMware NAT troubleshooting
 - Approved software installation support
-- Workstation imaging and redeployment workflow
+- Workstation replacement and redeployment workflow
 - User data backup and restore
 - VMware snapshot usage
 - Basic PowerShell support tasks

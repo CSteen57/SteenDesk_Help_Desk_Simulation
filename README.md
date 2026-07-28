@@ -47,7 +47,7 @@ This project uses the SteenCorp Active Directory lab as the underlying environme
 | Ticket #004 | User cannot access network share by hostname | DNS / hostname resolution |
 | Ticket #005 | User cannot install approved software | Software support / least privilege |
 | Ticket #006 | User cannot access internet | VMware NAT / gateway troubleshooting |
-| Ticket #007 | Defective workstation redeployed for user | Workstation imaging / user data restore |
+| Ticket #007 | Defective workstation replaced and redeployed | Workstation deployment / user data restore |
 
 [Open the ticket directory](./Helpdesk_Tickets/README.md)
 
@@ -62,7 +62,7 @@ This project uses the SteenCorp Active Directory lab as the underlying environme
 - DNS and hostname resolution testing
 - DHCP and gateway validation
 - VMware NAT troubleshooting
-- Workstation imaging and redeployment workflow
+- Workstation replacement and redeployment workflow
 - User data backup and restore
 - VMware snapshot usage
 - Basic PowerShell support tasks
@@ -74,8 +74,8 @@ This project uses the SteenCorp Active Directory lab as the underlying environme
 
 ---
 
-## Status
+## Project Status
 
 Seven help desk tickets have been completed and documented.
 
-Future tickets may include printer support, Microsoft 365 troubleshooting, VPN access, endpoint security alerts, remote support workflows, and escalation examples.
+The project will continue only when new infrastructure work creates a meaningful support scenario. Planned additions include remote support and event-log investigation, an FS01 file-server migration, and backup recovery validation.
